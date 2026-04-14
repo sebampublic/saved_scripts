@@ -37,7 +37,7 @@ pipx upgrade yt-dlp
 ## URL List File Example
 
 ```
-link1.com
-ling2.com
-link3.com
+https://www.youtube.com/@Soundgarden/releases
+https://www.youtube.com/@RainbowKittenSurprise/releases
+https://www.youtube.com/@theweeks/releases
 ```
