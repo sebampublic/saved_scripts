@@ -36,4 +36,8 @@ pipx upgrade yt-dlp
 
 ## URL List File Example
 
-```<br>linkone.com<br>linktwo.com<br>linkthree.com<br>```
+```
+link1.com
+ling2.com
+link3.com
+```
