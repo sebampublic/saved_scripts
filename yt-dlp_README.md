@@ -18,5 +18,5 @@ pipx ensurepath
 pipx install "yt-dlp[defaults]" or pipx install --pip-args=--pre "yt-dlp[default]" --force
 
 
-### Updating 
+## Updating 
 pipx upgrade yt-dlp 
