@@ -35,8 +35,9 @@
   34   │     \
   35   │     --batch-file "$URL_FILE" \
   36   │     --download-archive "$ARCHIVE_FILE_1" \
-  37   │     --download-archive "$ARCHIVE_FILE_2" \
-  38   │     --download-archive "$ARCHIVE_FILE_3" \
+           # Extra Archive File Useage 
+  37   │   # --download-archive "$ARCHIVE_FILE_2" \
+  38   │   # --download-archive "$ARCHIVE_FILE_3" \
   39   │     \
   40   │     --output "$MUSIC_DIR/%(uploader,artist)s/%(album)s/%(title)s.%(ext)s" \
   41   │     --ignore-errors \
