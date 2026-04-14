@@ -1,6 +1,10 @@
-# Install yt-dlp global
+# yt-dlp Script Useage
 
-## Debian Based
+
+## Install yt-dlp global
+
+
+### Debian
 sudo apt install pipx ffmpeg 
 
 pipx ensurepath
@@ -9,7 +13,7 @@ pipx install "yt-dlp[defaults]" or pipx install --pip-args=--pre "yt-dlp[default
 
 
 
-## MacOS 
+### MacOS 
 brew install pipx ffmpeg
 
 pipx ensurepath
@@ -18,7 +22,7 @@ pipx install "yt-dlp[defaults]" or pipx install --pip-args=--pre "yt-dlp[default
 
 
 
-## Windows
+### Windows
 winget install pypa.pipx ffmpeg
 
 pipx ensurepath
@@ -27,5 +31,12 @@ pipx install "yt-dlp[defaults]" or pipx install --pip-args=--pre "yt-dlp[default
 
 
 
-## Updating 
+### Updating 
 pipx upgrade yt-dlp 
+
+## URL List File Example
+
+''' linkone.com
+linktwo.com
+linkthree.com
+'''
