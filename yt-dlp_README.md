@@ -1,7 +1,7 @@
 # Install yt-dlp global
 
 ## Debian Based
-sudo apt install pipx ffmpeg
+sudo apt install pipx ffmpeg /
 pipx ensurepath
 pipx install "yt-dlp[defaults]" or pipx install --pip-args=--pre "yt-dlp[default]" --force
 
