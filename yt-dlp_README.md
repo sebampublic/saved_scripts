@@ -68,8 +68,9 @@ or
 pipx install --pip-args=--pre "yt-dlp[default]" --force (Pre-release version)
 ```
 ### Updating 
+```
 pipx upgrade yt-dlp 
-
+```
 ## URL List File Example
 
 ```
