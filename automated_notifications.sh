@@ -1,4 +1,4 @@
-WEBHOOK="https://discord.com/api/webhooks/1494795796351291393/1xxq28VskSQS9SiSgy1ftWI-CkBRUTF7baTB_vrQ3Abyhj3giUTFBYbV7CT-Itt62HN5"
+WEBHOOK=""
 
 send_discord() {
   local message="$1"
