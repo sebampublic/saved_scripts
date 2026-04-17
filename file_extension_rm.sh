@@ -5,31 +5,31 @@
 # Set to "true" to only print what would happen.
 DRY_RUN=true
 
-# Extensions to look for
-TARGET_EXT="mp3"
-KEEP_EXT="aac"
+# Extensions
+KEEP_EXT="m4a"
+DELETE_EXT="mp3"
 
-echo "Scanning for duplicate $TARGET_EXT files where $KEEP_EXT exists..."
+echo "Scanning for .$DELETE_EXT files where .$KEEP_EXT exists..."
 [ "$DRY_RUN" = true ] && echo "--- DRY RUN ACTIVE: No files will be deleted ---"
 
-# Use find with -print0 to handle spaces and special characters in filenames safely
-find . -type f -name "*.$TARGET_EXT" -print0 | while IFS= read -r -d '' mp3_file; do
+# Find all .m4a files safely (handles spaces/special chars)
+find . -type f -name "*.$KEEP_EXT" -print0 | while IFS= read -r -d '' keep_file; do
     
-    # Get the filename without the extension
-    base_path="${mp3_file%.$TARGET_EXT}"
+    # Remove extension to get base path
+    base_path="${keep_file%.$KEEP_EXT}"
     
-    # Construct the path for the file we want to keep
-    aac_file="${base_path}.$KEEP_EXT"
+    # Construct matching .mp3 filename
+    delete_file="${base_path}.$DELETE_EXT"
 
-    # Check if the matching .aac file exists
-    if [ -f "$aac_file" ]; then
+    # If matching .mp3 exists, delete it
+    if [ -f "$delete_file" ]; then
         if [ "$DRY_RUN" = true ]; then
-            echo "[WOULD DELETE] $mp3_file (Found matching $KEEP_EXT)"
+            echo "[WOULD DELETE] $delete_file (Found matching .$KEEP_EXT)"
         else
-            echo "[DELETING] $mp3_file"
-            rm "$mp3_file"
+            echo "[DELETING] $delete_file"
+            rm "$delete_file"
         fi
     fi
 done
 
-echo "Done you goofy goober."
+echo "Done."
